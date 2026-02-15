@@ -10,11 +10,41 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-                <li><a href="/diretoria">Diretoria</a></li>
-                <li><a href="/eventos-projetos">Eventos e Projetos</a></li>
-                <li><a href="/associados">Associados</a></li>
+                <li>
+                    <a
+                        href="/"
+                        class="{% if current_path is defined and current_path == '/' %}active{% endif %}"
+                        >Home</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/sobre"
+                        class="{% if current_path is defined and current_path is starting_with('/sobre') %}active{% endif %}"
+                        >Sobre</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/diretoria"
+                        class="{% if current_path is defined and current_path is starting_with('/diretoria') %}active{% endif %}"
+                        >Diretoria</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/eventos-projetos"
+                        class="{% if current_path is defined and current_path is starting_with('/eventos-projetos') %}active{% endif %}"
+                        >Eventos e Projetos</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/associados"
+                        class="{% if current_path is defined and current_path is starting_with('/associados') %}active{% endif %}"
+                        >Associados</a
+                    >
+                </li>
             </ul>
         </nav>
     </div>
