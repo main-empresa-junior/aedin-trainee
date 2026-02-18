@@ -1,16 +1,122 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block title %} Home {% endblock title %} {% block
+content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            Associação de Egressos do Departamento de Informática <br />
+            <span class="aedin-title">AEDIN</span>
+        </h1>
+        <p>Conectando egressos, docentes e o futuro da tecnologia na UEM</p>
+        <a href="#" class="btn-hero">Seja um Associado</a>
+    </div>
+</section>
 
-{% block title %} Home {% endblock title %}
-
-{% block content %}
-    <section class="hero">
-        <div class="hero-content">
-            <h1>
-                Associação de Egressos do Departamento de Informática <br />
-                <span class="aedin-title">AEDIN</span>
-            </h1>
-            <p>Conectando egressos, docentes e o futuro da tecnologia na UEM</p>
-            <a href="#" class="btn-hero">Seja um Associado</a>
+<!-- Quem Somos -->
+<section class="content-section">
+    <div class="red-title-section">
+        <h2>Quem Somos</h2>
+    </div>
+    <div class="content-who-we-are">
+        <div class="text-container-who-we-are">
+            <p>
+                A AEDIN (Associação de Egressos e Docentes do Departamento de
+                Informática) é uma sociedade civil sem fins lucrativos, fundada
+                em 06 de fevereiro de 2025, com sede no campus da Universidade
+                Estadual de Maringá (UEM), em Maringá, Paraná.
+            </p>
+            <p>
+                Nossa missão é congregar egressos e docentes do Departamento de
+                Informática (DIN/UEM), cultivando uma rede de apoio duradoura
+                que fortalece os vínculos entre ex-alunos, professores e o
+                próprio departamento. Promovemos o desenvolvimento profissional,
+                cultural e acadêmico de toda nossa comunidade.
+            </p>
         </div>
-    </section>
+        <div class="img-who-we-are"></div>
+    </div>
+    <p>
+        Somos uma associação de prazo indeterminado, constituída por número
+        ilimitado de associados, aberta a todos que tenham concluído
+        integralmente pelo menos um dos cursos ofertados pelo DIN (graduação ou
+        pós-graduação) e aos docentes que têm ou já tiveram vínculo profissional
+        com o departamento.
+    </p>
+</section>
+
+<!-- O Que Fazemos -->
+<section class="content-section"">
+    <div class="blue-title-section">
+        <h2>O que Fazemos</h2>
+    </div>
+    <p>
+        Para concretizar nossa missão, a AEDIN desenvolve diversas atividades e
+        iniciativas que beneficiam egressos, docentes, alunos e o departamento  como um todo:
+    </p>
+    <div class="list-cards">
+        {% if section.extra.oque_fazemos %}
+                {% for card in section.extra.oque_fazemos %}
+                <div class="card">
+                    <div class="card-title">
+                        <img width="30" height="30" src="{{ card.icone | safe }}" alt="{{ card.titulo }}"/>
+                        {{ card.titulo }}
+                    </div>
+                    <p>{{ card.texto }}</p>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>Dados não encontrados no front-matter.</p>
+            {% endif %}
+    </div>
+</section>
+
+<!-- Apoie a AEDIN -->
+<section class="support-us">
+    <h2>Apoie a AEDIN</h2>
+    <p>Sua contribuição fortalece nossa comunidade e apoia projetos transformadores</p>
+    <a href="#" class="btn">Saiba mais Sobre Doações</a>
+</section>
+
+<!-- Faça Parte da AEDIN -->
+<section class="content-section"">
+    <div class="blue-title-section">
+        <h2>Faça Parte da AEDIN</h2>
+    </div>
+    Quem pode se associar à AEDIN
+    <div class="list-cards become-member">
+        {% if section.extra.pode_ser_membro %}
+                {% for card in section.extra.pode_ser_membro %}
+                <div class="become-member-card">
+                    <span>{{card.titulo}}</span>
+                    <p>{{card.texto}}</p>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>Dados não encontrados no front-matter.</p>
+            {% endif %}
+    </div>
+
+    Benefícios de ser Associado
+    <div class="list-benefits">
+        <div class="benefits-card">
+            <span>Direitos e Privilégios</span>
+            <ul class="rights-privileges">
+                <li>Participar de reuniões e atividades sociais</li>
+                <li>Votar e ser votado para cargos da Diretoria</li>
+                <li>Sugerir projetos e medidas de interesse do DIN</li>
+                <li>Contribuir para campanhas promovidas pela AEDIN</li>
+                <li>Acesso exclusivo à área de transparência financeira</li>
+                <li>Download de modelos de projeto e documentos</li>
+                <li>Networking com profissionais da área de tecnologia</li>
+            </ul>
+        </div>
+
+        <div class="benefits-card ass">
+            <span>Associação Vitalícia</span>
+            <p>
+                Todos os egressos e docentes que manifestem adesão voluntária à AEDIN são considerados associados vitalícios, desde que cumpram as disposições estatutárias.
+            </p>
+            <a href="#" class="btn">Associe-se Agora</a>
+        </div>
+    </div>
+</section>
 {% endblock content %}

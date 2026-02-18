@@ -2,10 +2,29 @@
 @import "layout/header";
 @import "layout/footer";
 @import "layout/hero";
+@import "pages/home";
 
 body {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+}
+
+.btn {
+    background-color: #000;
+    padding: 12px 40px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    color: #fff;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #222;
+    transform: scale(1.05);
 }

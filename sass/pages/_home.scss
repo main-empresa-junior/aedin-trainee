@@ -1,0 +1,227 @@
+.red-title-section {
+    background: linear-gradient(
+        90deg,
+        #f51630 5%,
+        #e1172e 32%,
+        #a41828 49%,
+        #931524 65%,
+        #7f121f 86%
+    );
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.blue-title-section {
+    background: linear-gradient(
+        90deg,
+        #022b59 0%,
+        #033670 23%,
+        #034691 44%,
+        #0450a6 59%,
+        #045cbf 85%
+    );
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.content-section {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Quem Somos */
+.content-who-we-are {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.text-container-who-we-are {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* .img-who-we-are {
+    min-height: 380px;
+    min-width: 53%;
+    border-radius: 10px;
+    border: 2px solid black;
+} */
+
+.img-who-we-are {
+    min-height: 380px;
+    min-width: 53%;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: 
+    /* trocar pela url(imagem) */
+        linear-gradient(#ffffff, #ffffff), 
+        linear-gradient(135deg, #0457B5 12%, #034084 41%, #821320 66%, #4F0B13 88%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+@media (max-width: 768px) {
+    .content-who-we-are {
+        flex-direction: column-reverse; 
+        gap: 20px;
+    }
+
+    .img-who-we-are {
+        min-width: 100%;
+        min-height: 250px;
+    }
+
+    .text-container-who-we-are {
+        gap: 20px;
+    }
+
+    .content-section p {
+        text-align: left;
+    }
+}
+
+/* O Que Fazemos */
+.list-cards {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.card p {
+    text-align: justify;
+}
+
+/* Apoei a AEDIN */
+.support-us {
+    margin-top: 20px;
+    background: linear-gradient(
+        90deg,
+        #f51630 5%,
+        #e1172e 32%,
+        #a41828 49%,
+        #931524 65%,
+        #7f121f 86%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 327px;
+    color: #fff;
+}
+
+.support-us h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.support-us p {
+    margin: 20px 0px;
+    font-weight: 500px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Faça Parte da AEDIN */
+.become-member {
+    margin-bottom: 10px;
+}
+
+.become-member-card {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.become-member-card span {
+    font-weight: bold;
+}
+
+.become-member-card {
+    margin-bottom: 10px;
+}
+
+.list-benefits {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.benefits-card {
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.benefits-card span {
+    font-weight: bold;
+}
+
+.rights-privileges {
+    width: 100%;
+    list-style-type: inherit;
+    margin-left: 30px;
+}
+
+.ass p {
+    margin: 10px 0px;
+}
