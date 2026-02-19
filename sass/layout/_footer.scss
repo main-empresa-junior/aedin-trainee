@@ -1,5 +1,4 @@
 .main-footer {
-    background-image: url("../images/footer-background.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -37,21 +36,23 @@
     letter-spacing: 1px;
 }
 
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    display: block;
-    margin-bottom: 12px;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #fff;
-    transform: translateX(5px);
+.footer-links {
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 12px;
+        transition: 0.3s;
+    }
+    
+    a:hover {
+        color: #fff;
+        transform: translateX(5px);
+    }
 }
 
 .footer-social a {
@@ -67,11 +68,11 @@
     margin-top: 50px;
     padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-bottom p {
-    font-size: 0.85rem;
-    opacity: 0.7;
+    
+    p {
+        font-size: 0.85rem;
+        opacity: 0.7;
+    }
 }
 
 .main-signature {
@@ -80,11 +81,11 @@
     color: rgba(255, 255, 255, 0.35) !important;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-}
-
-.main-signature span {
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.5);
+    
+    span {
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.5);
+    }
 }
 
 @media (max-width: 768px) {

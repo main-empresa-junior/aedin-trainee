@@ -1,13 +1,13 @@
 {% extends "base.html" %} {% block title %} Home {% endblock title %} {% block
 content %}
-<section class="hero">
+<section class="hero" style="background-image: url('{{ get_url(path="images/hero-background.svg") }}')">
     <div class="hero-content">
         <h1>
-            Associação de Egressos do Departamento de Informática <br />
+            Associação de Egressos do Departamento de Informática
             <span class="aedin-title">AEDIN</span>
         </h1>
         <p>Conectando egressos, docentes e o futuro da tecnologia na UEM</p>
-        <a href="#" class="btn-hero">Seja um Associado</a>
+        <a href="#" class="btn">Seja um Associado</a>
     </div>
 </section>
 
@@ -53,11 +53,11 @@ content %}
         iniciativas que beneficiam egressos, docentes, alunos e o departamento  como um todo:
     </p>
     <div class="list-cards">
-        {% if section.extra.oque_fazemos %}
-                {% for card in section.extra.oque_fazemos %}
+        {% if section.extra.o_que_fazemos %}
+                {% for card in section.extra.o_que_fazemos %}
                 <div class="card">
                     <div class="card-title">
-                        <img width="30" height="30" src="{{ card.icone | safe }}" alt="{{ card.titulo }}"/>
+                        <img width="30" height="30" src="{{ get_url(path=card.icone) }}" alt="{{ card.titulo }}"/>
                         {{ card.titulo }}
                     </div>
                     <p>{{ card.texto }}</p>
@@ -77,11 +77,12 @@ content %}
 </section>
 
 <!-- Faça Parte da AEDIN -->
-<section class="content-section"">
+<section class="content-section">
     <div class="blue-title-section">
         <h2>Faça Parte da AEDIN</h2>
     </div>
-    Quem pode se associar à AEDIN
+
+    <p>Quem pode se associar à AEDIN</p>
     <div class="list-cards become-member">
         {% if section.extra.pode_ser_membro %}
                 {% for card in section.extra.pode_ser_membro %}
@@ -95,7 +96,7 @@ content %}
             {% endif %}
     </div>
 
-    Benefícios de ser Associado
+    <p>Benefícios de ser Associado</p>
     <div class="list-benefits">
         <div class="benefits-card">
             <span>Direitos e Privilégios</span>

@@ -19,28 +19,28 @@
                 </li>
                 <li>
                     <a
-                        href="/sobre"
+                        href="{{ get_url(path='sobre') }}"
                         class="{% if current_path is defined and current_path is starting_with('/sobre') %}active{% endif %}"
                         >Sobre</a
                     >
                 </li>
                 <li>
                     <a
-                        href="/diretoria"
+                        href="{{ get_url(path='diretoria') }}"
                         class="{% if current_path is defined and current_path is starting_with('/diretoria') %}active{% endif %}"
                         >Diretoria</a
                     >
                 </li>
                 <li>
                     <a
-                        href="/eventos-projetos"
+                        href="{{ get_url(path='eventos-projetos') }}"
                         class="{% if current_path is defined and current_path is starting_with('/eventos-projetos') %}active{% endif %}"
                         >Eventos e Projetos</a
                     >
                 </li>
                 <li>
                     <a
-                        href="/associados"
+                        href="{{ get_url(path='associados') }}"
                         class="{% if current_path is defined and current_path is starting_with('/associados') %}active{% endif %}"
                         >Associados</a
                     >
