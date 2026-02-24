@@ -1,7 +1,7 @@
 <header class="main-header">
     <div class="container">
         <div class="logo">
-            <a href="/">
+            <a href="{{ get_url(path='') }}">
                 <img
                     src="{{ get_url(path='images/logo-aedin.svg') }}"
                     alt="AEDIN Logo"
@@ -12,7 +12,7 @@
             <ul>
                 <li>
                     <a
-                        href="/"
+                        href="{{ get_url(path='') }}"
                         class="{% if current_path is defined and current_path == '/' %}active{% endif %}"
                         >Home</a
                     >
