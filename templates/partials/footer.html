@@ -1,0 +1,42 @@
+<footer class="main-footer" style="background-image: url('{{ get_url(path="images/hero-background.svg") }}')">   
+    <div class="container footer-grid">
+        <div>
+            <iframe
+                title="Mapa Localização AEDIN"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4600.73568296866!2d-51.93889222372269!3d-23.40564305589165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd132a8d00001%3A0x6ecea148b6a6618a!2sDIN%20-%20Departamento%20de%20Inform%C3%A1tica!5e1!3m2!1spt-BR!2sbr!4v1770818354771!5m2!1spt-BR!2sbr"
+                loading="lazy"
+                class="footer-map"
+            ></iframe>
+
+            <div class="contact-text">
+                <p><strong>DIN - Universidade Estadual de Maringá</strong></p>
+                <p>Maringá - PR | Bloco C56 - Sala xxx - 1º Andar</p>
+                <p>Telefone: (44) xxxx-xxxx</p>
+                <p>Email: contato@aedin.com</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="{{ get_url(path='sobre') }}">Sobre</a></li>
+                <li><a href="{{ get_url(path='diretoria') }}">Diretoria</a></li>
+                <li><a href="{{ get_url(path='eventos-projetos') }}">Eventos e Projetos</a></li>
+                <li><a href="{{ get_url(path='associados') }}">Associados</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h4>Redes Sociais</h4>
+            <a href="#" class="social-item">Instagram</a>
+            <a href="#" class="social-item">Linkedin</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&COPY; {{ now() | date(format="%Y") }} AEDIN - Todos os direitos reservados</p>
+        <p class="main-signature">
+            Desenvolvido por <span>Main Empresa Júnior</span>
+        </p>
+    </div>
+</footer>
