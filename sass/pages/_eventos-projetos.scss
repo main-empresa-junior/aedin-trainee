@@ -13,7 +13,7 @@
  
 .eventos-carousel {
     display: flex;
-    gap: 210px;                        
+    gap: 20px;                        
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -36,6 +36,8 @@
     max-width: 340px;
     scroll-snap-align: start;
     padding: 0;
+    border: v.$default-border;
+    border-radius: v.$default-border-radius;
     cursor: pointer;
     transition: box-shadow 0.25s, transform 0.25s;
  
@@ -62,7 +64,7 @@
  
     &-body {
         padding: 10px 14px 14px;
-        border-top: 1px solid #d0d0d0;
+        border-top: v.$default-border;
     }
  
     &-title {

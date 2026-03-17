@@ -17,7 +17,46 @@ imagem = ""
 titulo = "Atividade z"
 imagem = ""
 
+[[extra.atividades_semana]]
+titulo = "Atividade z"
+imagem = ""
+
+[[extra.atividades_semana]]
+titulo = "Atividade z"
+imagem = ""
+
+[[extra.atividades_semana]]
+titulo = "Atividade z"
+imagem = ""
+
+[[extra.atividades_semana]]
+titulo = "Atividade z"
+imagem = ""
+
+[[extra.atividades_semana]]
+titulo = "Atividade z"
+imagem = ""
+
 # ─── Nossos Eventos ────────────────────────────────────────
+[[extra.nossos_eventos]]
+titulo = "Titulo Evento"
+imagem = ""
+
+[[extra.nossos_eventos]]
+titulo = "Titulo Evento"
+
+[[extra.nossos_eventos]]
+titulo = "Titulo Evento"
+
+[[extra.nossos_eventos]]
+titulo = "Titulo Evento"
+
+[[extra.nossos_eventos]]
+titulo = "Titulo Evento"
+
+[[extra.nossos_eventos]]
+titulo = "Titulo Evento"
+
 [[extra.nossos_eventos]]
 titulo = "Titulo Evento"
 
@@ -34,6 +73,18 @@ titulo = "Titulo Evento"
 [[extra.nossos_projetos]]
 titulo = "Titulo Projeto"
 imagem = ""
+
+[[extra.nossos_projetos]]
+titulo = "Titulo Projeto"
+
+[[extra.nossos_projetos]]
+titulo = "Titulo Projeto"
+
+[[extra.nossos_projetos]]
+titulo = "Titulo Projeto"
+
+[[extra.nossos_projetos]]
+titulo = "Titulo Projeto"
 
 [[extra.nossos_projetos]]
 titulo = "Titulo Projeto"
