@@ -1,26 +1,22 @@
 {% extends "base.html" %}
 {% block title %}Eventos e Projetos{% endblock title %}
-
+ 
 {% block content %}
+ 
 
-<!-- ══════════════════════════════════════
-     HERO BANNER
-══════════════════════════════════════ -->
-<section class="eventos-hero">
-    <div class="eventos-hero-content">
+<section class="hero" style="background-image: url('{{ get_url(path="images/hero-background.svg") }}')">
+    <div class="hero-content">
         <h1>Eventos e Projetos</h1>
         <p>Conectando egressos, docentes e o futuro da tecnologia na UEM</p>
     </div>
 </section>
+ 
 
-<!-- ══════════════════════════════════════
-     ATIVIDADES DA SEMANA
-══════════════════════════════════════ -->
-<section class="eventos-section" id="atividades">
-    <div class="eventos-section-header">
+<section class="content-section eventos-section" id="atividades">
+    <div class="red-title-section">
         <h2>Atividades da semana</h2>
     </div>
-
+ 
     <div class="eventos-carousel-wrapper">
         <div class="eventos-carousel">
             {% if section.extra.atividades_semana %}
@@ -42,15 +38,13 @@
         </div>
     </div>
 </section>
+ 
 
-<!-- ══════════════════════════════════════
-     NOSSOS EVENTOS
-══════════════════════════════════════ -->
-<section class="eventos-section" id="eventos">
-    <div class="eventos-section-header">
+<section class="content-section eventos-section" id="eventos">
+    <div class="red-title-section">
         <h2>Nossos Eventos</h2>
     </div>
-
+ 
     <div class="eventos-carousel-wrapper">
         <div class="eventos-carousel">
             {% if section.extra.nossos_eventos %}
@@ -76,15 +70,13 @@
         </div>
     </div>
 </section>
+ 
 
-<!-- ══════════════════════════════════════
-     NOSSOS PROJETOS
-══════════════════════════════════════ -->
-<section class="eventos-section" id="projetos">
-    <div class="eventos-section-header">
+<section class="content-section eventos-section" id="projetos">
+    <div class="red-title-section">
         <h2>Nossos Projetos</h2>
     </div>
-
+ 
     <div class="eventos-carousel-wrapper">
         <div class="eventos-carousel">
             {% if section.extra.nossos_projetos %}
@@ -110,5 +102,6 @@
         </div>
     </div>
 </section>
-
+ 
 {% endblock content %}
+ 
