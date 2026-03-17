@@ -1,6 +1,13 @@
 // sass/pages/_eventos-projetos.scss
 @use "../variables" as v;
  
+.eventos-projetos {
+    .hero {
+        min-height: 180px;
+        padding: 32px 24px;
+    }
+}
+
 // ─── Seção wrapper ─────────────────────────────────────────
 .eventos-section {
     padding-bottom: 40px;
