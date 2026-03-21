@@ -1,0 +1,205 @@
+@use "../variables" as v;
+
+// Títulos de seção
+%title-section-base {
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.red-title-section {
+    @extend %title-section-base;
+    background: v.$red-gradient;
+}
+
+.blue-title-section {
+    @extend %title-section-base;
+    background: v.$blue-gradient;
+}
+
+// Seção de conteúdo
+.content-section {
+    margin-top: 20px;
+    padding: 10px;
+
+    p {
+        @media (max-width: 768px) {
+            text-align: left;
+        }
+    }
+}
+
+// Quem Somos
+.content-who-we-are {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @media (min-width: 769px) {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+.text-container-who-we-are {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: 769px) {
+        gap: 80px;
+    }
+}
+
+.img-who-we-are {
+    min-height: 250px;
+    min-width: 100%;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image:
+        linear-gradient(#ffffff, #ffffff),
+        v.$img-border-gradient;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+    @media (min-width: 769px) {
+        min-height: 380px;
+        min-width: 53%;
+    }
+}
+
+// O Que Fazemos
+.list-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    align-items: stretch;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    border: v.$default-border;
+    border-radius: v.$default-border-radius;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &-title {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+// Apoie a AEDIN
+.support-us {
+    margin-top: 20px;
+    background: linear-gradient(
+        90deg,
+        #f51630 5%,
+        #e1172e 32%,
+        #a41828 49%,
+        #931524 65%,
+        #7f121f 86%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 327px;
+    color: #fff;
+
+    h2 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    p {
+        margin: 20px 0;
+        font-weight: 500;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+// Faça Parte da AEDIN
+.become-member {
+    margin-bottom: 10px;
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        width: 570px;
+        border: v.$default-border;
+        border-radius: v.$default-border-radius;
+        padding: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 10px;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.list-benefits {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.benefits-card {
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: v.$default-border;
+    border-radius: v.$default-border-radius;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.rights-privileges {
+    width: 100%;
+    list-style-type: inherit;
+    margin-left: 30px;
+}
+
+.ass {
+    p {
+        margin: 10px 0;
+    }
+}
