@@ -40,6 +40,11 @@
         margin-bottom: 8px;
         opacity: 0.9;
     }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
 }
 
 .footer-links,
@@ -83,7 +88,7 @@
     @media (min-width: 769px) {
         display: block;
     }
-    
+
     a {
         color: white;
         text-decoration: none;
@@ -113,7 +118,7 @@
     color: rgba(255, 255, 255, 0.35);
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    
+
     a {
         text-decoration: none;
         font-weight: 700;
