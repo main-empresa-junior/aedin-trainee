@@ -1,0 +1,199 @@
+@use "../variables" as v;
+
+// Títulos de seção
+%title-section-base {
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+
+
+/* ================================================================
+    RESET E BASE
+   Remove margens/paddings padrão do navegador e define
+   comportamento de box-sizing e rolagem suave.
+================================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Animação suave ao clicar em âncoras */
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-red);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+address {
+  font-style: normal; /* Remove o itálico padrão de <address> */
+}
+
+/* --------------------------------------------------
+    SUB-CABEÇALHO COM CONTADOR
+   Exibe o total de associados abaixo do cabeçalho.
+-------------------------------------------------- */
+.section-subheader {
+  padding: var(--spacing-md);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+ 
+.subheader__label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+ 
+.subheader__count {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+ 
+/* --------------------------------------------------
+    LISTA DE ASSOCIADOS
+   Wrapper que agrupa todos os cards.
+   Cada card é separado por uma linha divisória.
+-------------------------------------------------- */
+.associados-list {
+  padding: 0 var(--spacing-md);
+}
+
+/* --------------------------------------------------
+    CARD DE ASSOCIADO
+   Layout flex em três colunas:
+     - Coluna 1: Foto (círculo)
+     - Coluna 2: Nome, Ocupação, Links (~50% da largura)
+     - Coluna 3: Metadados (data, curso, ano)
+   Separado por borda inferior exceto o último.
+-------------------------------------------------- */
+.card-associado {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: 1.5%;
+  margin-top: 1.5%;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Remove a borda do último card da lista */
+.card-associado:last-child {
+  border-bottom: none;
+}
+
+/* Foto circular do associado */
+.card-associado__foto {
+  flex-shrink: 0; /* Impede que a foto encolha */
+  width: 72px;
+  height: 72px;
+  margin-right: 1%;
+}
+
+.card-associado__foto img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;       /* Formato circular */
+  object-fit: cover;        /* Corta e centraliza a imagem */
+  border: 2px solid var(--color-border);
+}
+
+/* Coluna de informações principais (nome, ocupação, links) */
+.card-associado__info {
+  flex: 1;                  /* Ocupa o espaço disponível */
+  min-width: 0;             /* Evita overflow em telas menores */
+}
+
+.card-associado__info p {
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Linha de links – permite quebra de linha em telas estreitas */
+.card-associado__links {
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+/* Coluna de metadados (data, curso, ano de formação) */
+.card-associado__meta {
+  flex-shrink: 0;
+  width: 220px;             /* Largura fixa para alinhamento consistente */
+  font-size: 0.85rem;
+}
+
+.card-associado__meta p {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.5;
+}
+
+/* Labels negrito dentro dos cards (ex: "Nome:", "Curso:") */
+.label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* ================================================================
+    RESPONSIVIDADE
+   Adaptações para telas menores (tablets e celulares).
+================================================================ */
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+
+  /* Cards: empilha foto + info verticalmente */
+  .card-associado {
+    flex-direction: column;
+  }
+
+  /* Metadados: largura total em mobile */
+  .card-associado__meta {
+    width: 100%;
+  }
+
+}
+
+/* Celulares (≤ 480px) */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.85rem;
+  }
+
+}
