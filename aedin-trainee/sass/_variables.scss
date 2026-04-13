@@ -1,0 +1,29 @@
+$red-gradient: linear-gradient(
+    90deg,
+    #f51630 5%,
+    #e1172e 32%,
+    #a41828 49%,
+    #931524 65%,
+    #7f121f 86%
+);
+
+$blue-gradient: linear-gradient(
+    90deg,
+    #022b59 0%,
+    #033670 23%,
+    #034691 44%,
+    #0450a6 59%,
+    #045cbf 85%
+);
+
+$img-border-gradient: linear-gradient(
+    135deg,
+    #0457b5 12%,
+    #034084 41%,
+    #821320 66%,
+    #4f0b13 88%
+);
+
+$default-border: 2px solid black;
+
+$default-border-radius: 10px;

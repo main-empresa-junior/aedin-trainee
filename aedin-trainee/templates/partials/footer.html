@@ -1,4 +1,4 @@
-<footer class="main-footer" style="background-image: url('{{ get_url(path="images/hero-background.svg") }}')">
+<footer class="main-footer" style="background-image: url('{{ get_url(path="images/hero-background.svg") }}')">   
     <div class="container footer-grid">
         <div>
             <iframe
@@ -10,42 +10,33 @@
 
             <div class="contact-text">
                 <p><strong>DIN - Universidade Estadual de Maringá</strong></p>
-                <p>Maringá - PR | Bloco C56 - Sala 003 - Térreo</p>
+                <p>Maringá - PR | Bloco C56 - Sala xxx - 1º Andar</p>
                 <p>Telefone: (44) xxxx-xxxx</p>
-                <p>Email: <a href="mailto:aedin@uem.com">aedin@uem.com</a></p>
+                <p>Email: contato@aedin.com</p>
             </div>
         </div>
 
         <div class="footer-links">
             <h4>Links</h4>
             <ul>
-                <li><a href="{{ get_url(path='/') }}">Home</a></li>
                 <li><a href="{{ get_url(path='sobre') }}">Sobre</a></li>
                 <li><a href="{{ get_url(path='diretoria') }}">Diretoria</a></li>
                 <li><a href="{{ get_url(path='eventos-projetos') }}">Eventos e Projetos</a></li>
                 <li><a href="{{ get_url(path='associados') }}">Associados</a></li>
-                <li><a href="{{ get_url(path='login') }}">Login</a></li>
             </ul>
         </div>
 
         <div class="footer-social">
             <h4>Redes Sociais</h4>
-            <a href="https://www.instagram.com/aedin_uem">
-                <img width="30" height="30" src="{{ get_url(path='icons/icons8-instagram-logo-30.png') }}" alt="Instagram Logo"/>
-                Instagram
-            </a>
-
-            <a href="https://www.linkedin.com/in/aedin-uem">
-                <img width="30" height="30" src="{{ get_url(path='icons/icons8-linkedin-30.png') }}" alt="Linkedin Logo"/>
-                Linkedin
-            </a>
+            <a href="#" class="social-item">Instagram</a>
+            <a href="#" class="social-item">Linkedin</a>
         </div>
     </div>
 
     <div class="footer-bottom">
         <p>&COPY; {{ now() | date(format="%Y") }} AEDIN - Todos os direitos reservados</p>
         <p class="main-signature">
-            Desenvolvido por <a href="#">Main Empresa Júnior</a>
+            Desenvolvido por <span>Main Empresa Júnior</span>
         </p>
     </div>
 </footer>
