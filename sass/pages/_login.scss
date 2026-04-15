@@ -1,0 +1,104 @@
+.login-area {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;              
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    150deg,
+    #f51630 0%,  
+    #e1172e 25%,
+    #034691 70%,  
+    #045cbf 100%
+  );
+  font-family: Arial, sans-serif;
+
+  .login-container {
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+
+    header {
+      h1 {
+        font-size: 28px;      
+        font-weight: bold;    
+        margin-bottom: 30px;  
+        color: black;       
+        text-align: center;   
+      }
+
+      .logo {
+        width: 150px;         
+        margin-bottom: 20px;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-top: 10px;
+        text-align: left;
+      }
+
+      input {
+        padding: 10px;                    
+        margin-top: 5px;
+        border: 2px solid #333;           
+        border-radius: 12px;               
+        outline: none;                     
+        transition: border-color 0.2s;     
+        font-size: 14px;
+
+        &:focus {
+          border-color: #045cbf;             
+          box-shadow: 0 0 5px rgba(4, 92, 191, 0.5); 
+        }
+      }
+
+      button {
+        margin-top: 15px;
+        padding: 10px;
+        background: linear-gradient(90deg, #f51630 0%, #045cbf 100%); 
+        color: white;
+        border: none;
+        border-radius: 20px; 
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.2s, box-shadow 0.2s;
+
+        &:hover {
+          transform: translateY(-2px); 
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+
+    .esqueceu-a-senha {
+      margin-top: 15px;
+      font-size: 13px;           
+      color: #555;                    
+      text-align: center;
+
+      // Nesse caso não precisa de outra classe no momento, como a página de login não tem 
+      // outros componentes o estilo está ok
+      a {
+        color: #045cbf;                
+        text-decoration: none;         
+        font-weight: 500;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #022b59;               
+          text-decoration: underline;    
+        }
+      }
+    }
+  }
+}

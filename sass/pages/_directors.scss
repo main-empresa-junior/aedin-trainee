@@ -1,0 +1,113 @@
+strong {
+    font-weight: bold;
+}
+.directors-page .red-title-section {
+    height: auto !important;
+    margin-top: 40px;
+    margin-left: 10px;
+    padding: 8px 0;
+    font-size: 1.6rem;
+}
+
+.directors-page .blue-title-section {
+    height: auto !important;
+    padding: 10px 22;
+    margin-left: 10px;
+    font-size: 1.3rem;
+}
+
+.directors-card {
+    display: flex;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.directors-page .img-holder {
+    height: 100px;
+    width: 100px;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    margin-left: 10px;
+
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(45deg, red, blue) border-box;
+}
+
+@media (min-width: 769px) {
+    .directors-page .img-holder {
+        min-height: 200px;
+        min-width: 35%;
+        margin-bottom: 30px;
+    }
+}
+
+.directors-page .info {
+    flex: 1;
+}
+
+.directors-page .comentario {
+    width: 3000px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: -220px;
+    font-size: 13px;
+    font-style: italic;
+}
+/* .directors-page {
+    .hero {
+        padding: 40px 0;
+        min-height: unset;
+        height: auto;
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+
+            h1 {
+                margin: 0 0 8px 0;
+                font-size: 24px;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+} */
+
+.site-header {
+    position: sticky;
+    top: 110px;
+    z-index: 9999;
+    background: white;
+}
+.container {
+    display: flex;
+}
+.subnav {
+    position: sticky;
+    top: 70px;
+    padding: 10px 20px;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.tabs {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.tabs a.active {
+    font-weight: bold;
+}
+.directors-page .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}

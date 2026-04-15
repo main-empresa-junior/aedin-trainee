@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Detalhe{% endblock title %}
+ 
+{% block content %}
+ 
+{% set pai = get_section(path="eventos-projetos/_index.md") %}
+ 
+<script>
+    const SECAO_DATA = {
+        atividades: {{ pai.extra.atividades_semana | json_encode() | safe }},
+        eventos:    {{ pai.extra.nossos_eventos    | json_encode() | safe }},
+        projetos:   {{ pai.extra.nossos_projetos   | json_encode() | safe }}
+    };
+</script>
+ 
+<div class="eventos-projetos">
+    <section class="hero" style="background-image: url('{{ get_url(path="images/hero-background.svg") }}')">
+        <div class="hero-content">
+            <h1 id="detalhe-titulo">Carregando...</h1>
+            <p  id="detalhe-data"></p>
+        </div>
+    </section>
+</div>
+ 
+<section class="content-section">
+ 
+    <div id="detalhe-imagem-wrapper" class="item-detalhe-imagem" style="display:none">
+        <img id="detalhe-imagem" src="" alt="" />
+    </div>
+ 
+    <div id="detalhe-descricao" class="item-detalhe-descricao"></div>
+ 
+    <div id="detalhe-nao-encontrado" style="display:none">
+        <p>Item não encontrado.</p>
+    </div>
+ 
+    <a href="{{ get_url(path='eventos-projetos') }}" class="btn item-detalhe-voltar">
+        ← Voltar para Eventos e Projetos
+    </a>
+ 
+</section>
+ 
+<script>
+(function () {
+    const params = new URLSearchParams(window.location.search);
+    const secao  = params.get('secao');
+    const slug   = params.get('slug');
+ 
+    const lista  = SECAO_DATA[secao] || [];
+    const item   = lista.find(i => i.slug === slug);
+ 
+    if (!item) {
+        document.getElementById('detalhe-titulo').textContent = 'Item não encontrado';
+        document.getElementById('detalhe-nao-encontrado').style.display = 'block';
+        return;
+    }
+ 
+    document.getElementById('detalhe-titulo').textContent = item.titulo;
+ 
+    if (item.data) {
+        document.getElementById('detalhe-data').textContent = item.data;
+    }
+ 
+    if (item.imagem) {
+        const wrapper = document.getElementById('detalhe-imagem-wrapper');
+        const img     = document.getElementById('detalhe-imagem');
+        img.src       = '/' + item.imagem;
+        img.alt       = item.titulo;
+        wrapper.style.display = 'block';
+    }
+ 
+    if (item.descricao) {
+        document.getElementById('detalhe-descricao').innerHTML =
+            item.descricao.replace(/\n/g, '<br/>');
+    }
+})();
+</script>
+ 
+{% endblock content %}
