@@ -86,6 +86,8 @@
       color: #555;                    
       text-align: center;
 
+      // Nesse caso não precisa de outra classe no momento, como a página de login não tem 
+      // outros componentes o estilo está ok
       a {
         color: #045cbf;                
         text-decoration: none;         
