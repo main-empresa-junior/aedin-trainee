@@ -45,6 +45,13 @@
                         >Associados</a
                     >
                 </li>
+                <li>
+                    <a
+                        href="{{ get_url(path='login')}}"
+                        class="{% if current_path is defined and current_path is starting_with('/login') %}active{% endif %}"
+                        >Login</a
+                    >
+                </li>
             </ul>
         </nav>
     </div>
