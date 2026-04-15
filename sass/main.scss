@@ -8,7 +8,8 @@
 @use "pages/login";
 @use "pages/sobre";
 @use "pages/eventos-projetos";
-
+@use "pages/associados";
+@use "pages/directors";
 
 @use "variables" as v;
 
@@ -84,7 +85,7 @@ html {
 .content-section {
     margin-top: 20px;
     padding: 10px;
-    scroll-margin-top: 110px;   
+    scroll-margin-top: 110px;
 }
 
 .section-subtitle {
@@ -106,16 +107,16 @@ html {
     top: 110px;
     width: 200px;
     padding: 5px;
-    
+
     display: flex;
     flex-direction: column;
     z-index: 10;
-    
-    @media (max-width: 768px){
+
+    @media (max-width: 768px) {
         display: none;
     }
-    
-    &-button{
+
+    &-button {
         padding: 10px;
         text-decoration: none;
         font-weight: medium;
