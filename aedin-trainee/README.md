@@ -1,1 +1,0 @@
-# aedin-trainee
