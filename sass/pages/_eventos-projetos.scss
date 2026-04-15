@@ -1,0 +1,119 @@
+// sass/pages/_eventos-projetos.scss
+@use "../variables" as v;
+ 
+.eventos-projetos {
+    .hero {
+        min-height: 180px;
+        padding: 32px 24px;
+    }
+}
+
+// ─── Seção wrapper ─────────────────────────────────────────
+.eventos-section {
+    padding-bottom: 40px;
+}
+ 
+// ─── Carrossel Horizontal ──────────────────────────────────
+.eventos-carousel-wrapper {
+    position: relative;
+}
+ 
+.eventos-carousel {
+    display: flex;
+    gap: 20px;                        
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px 4px 12px;          
+    scrollbar-width: thin;
+    scrollbar-color: #f51630 #f5f5f5;
+ 
+    &::-webkit-scrollbar        { height: 5px; }
+    &::-webkit-scrollbar-track  { background: #f5f5f5; border-radius: 10px; }
+    &::-webkit-scrollbar-thumb  { background: #f51630; border-radius: 10px; }
+}
+ 
+// ─── Card do carrossel ────────────────────────────────────
+.eventos-card {
+    @extend .card;
+ 
+    width: auto !important;
+    flex: 0 0 300px;
+    min-width: 260px;
+    max-width: 340px;
+    scroll-snap-align: start;
+    padding: 0;
+    border: v.$default-border;
+    border-radius: v.$default-border-radius;
+    cursor: pointer;
+    transition: box-shadow 0.25s, transform 0.25s;
+ 
+    &:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        transform: translateY(-3px);
+    }
+ 
+    &-img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        display: block;
+        border-radius: v.$default-border-radius v.$default-border-radius 0 0;
+    }
+ 
+    &-img-placeholder {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #f5f5f5;
+        border-bottom: 1px solid #d0d0d0;
+        border-radius: v.$default-border-radius v.$default-border-radius 0 0;
+    }
+ 
+    &-body {
+        padding: 10px 14px 14px;
+        border-top: v.$default-border;
+    }
+ 
+    &-title {
+        @extend .card-title;
+        font-size: 0.88rem;
+    }
+}
+
+// Remove sublinhado dos links dos cards
+a.eventos-card {
+    text-decoration: none;
+    color: inherit;
+}
+ 
+// ─── Página de detalhe individual ─────────────────────────
+.item-detalhe {
+ 
+    &-imagem {
+        width: 100%;
+        max-height: 460px;
+        overflow: hidden;
+        border-radius: v.$default-border-radius;
+        border: v.$default-border;
+        margin-bottom: 28px;
+ 
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+ 
+    &-descricao {
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: justify;
+        margin-bottom: 32px;
+    }
+ 
+    &-voltar {
+        display: inline-block;
+        margin-top: 8px;
+    }
+}

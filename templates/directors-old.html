@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %} Diretoria Antiga {% endblock title %}
+{% block content %}
+<body class="directors-page">
+    <header class="site-header">
+        <div class="tabs">
+            <a href="{{ get_url(path='directors') }}">Diretoria Atual</a>
+            <a href="{{ get_url(path='directors-old') }}">Diretorias Antigas</a>
+        </div>
+    </header>
+<section class="directors-page">
+
+    <section class="hero" style="background-image: url('{{ get_url(path="images/hero-background.svg") }}')">
+        <div class="hero-content">
+            <h1>
+                Diretoria Antiga da AEDIN
+            </h1>
+            <p>Conectando egressos, docentes e o futuro da tecnologia na UEM</p>
+        </div>
+    </section>
+
+</section>
+
+<!--Diretoria executiva -->
+<section class="directors-page">
+    <div class="red-title-section">
+        <h2>
+            Diretorias Anteriores
+        </h2>
+    </div>
+</section>
+
+
+<section class="directors-page">
+
+    <div class="directors-card">
+        <div class="img-holder"></div>
+        <div class="info">
+
+                <p><strong>Nome:</strong> Hornet</p>
+
+                <p><strong>Cargo:</strong> Diretora Geral</p>
+
+                <p><strong>Gestão:</strong> 01/01/2024 - 01/01/2025</p>
+
+                <p><strong>Ocupação:</strong> Sentinela de hallownest</p>
+
+                <p>
+                    <strong>Links:</strong>
+                    <a href="#"> Instagram</a> |
+                    <a href="#"> Linkedin</a> |
+                    <a href="#"> Lattes</a>
+                </p>
+
+                <p class="comentario">
+                    "GUARANÁ!!!"
+                </p>
+        </div>
+    </div>
+</section>
+
+<section class="directors-page">
+
+    <div class="directors-card">
+        <div class="img-holder"></div>
+        <div class="info">
+
+                <p><strong>Nome:</strong> Hollow Knight</p>
+
+                <p><strong>Cargo:</strong> Vice diretor</p>
+
+                <p><strong>Gestão:</strong> 01/01/2024 - 01/01/2025</p>
+
+                <p><strong>Ocupação:</strong> boss final</p>
+
+                <p>
+                    <strong>Links:</strong>
+                    <a href="#"> Instagram</a> |
+                    <a href="#"> Linkedin</a> |
+                    <a href="#"> Lattes</a>
+                </p>
+                    <p class="comentario">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam placerat mattis lorem, ut tempor dui scelerisque sit amet."
+                    </p>
+        </div>
+    </div>
+</section>
+{% endblock content %}
