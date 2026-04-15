@@ -6,6 +6,7 @@
 @use "layout/hero";
 @use "pages/home";
 @use "pages/login";
+@use "pages/sobre";
 
 @use "variables" as v;
 
@@ -48,6 +49,82 @@ body {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// Títulos de seção
+%title-section-base {
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.red-title-section {
+    @extend %title-section-base;
+    background: v.$red-gradient;
+}
+
+.blue-title-section {
+    @extend %title-section-base;
+    background: v.$blue-gradient;
+}
+
+// Seção de conteúdo
+.content-section {
+    margin-top: 20px;
+    padding: 10px;
+    scroll-margin-top: 110px;   
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+// Página inteira
+.all-contents {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+// Barra lateral
+.sidebar {
+    position: sticky;
+    top: 110px;
+    width: 200px;
+    padding: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    
+    @media (max-width: 768px){
+        display: none;
+    }
+    
+    &-button{
+        padding: 10px;
+        text-decoration: none;
+        font-weight: medium;
+        color: black;
+    }
+}
+
+// Conteúdos da página
+.main-contents {
+    display: flex;
+    flex-direction: column;
 }
 
 /* nunito-regular - latin */
