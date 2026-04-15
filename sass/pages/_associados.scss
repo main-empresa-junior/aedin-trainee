@@ -40,6 +40,8 @@ body {
   line-height: 1.6;
 }
 
+//Sugestão: criar uma classe separada para os links que devem ter text-decoration: underline;
+// Isso tá quebrando o estilo de todos os links do site
 a {
   color: var(--color-link);
   text-decoration: none;

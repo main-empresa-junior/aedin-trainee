@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-
+{% block title %} Diretoria {% endblock title %}
 {% block content %}
 <body class="directors-page">
     <header class="site-header">
         <div class="tabs">
             <a href="{{ get_url(path='directors') }}">Diretoria Atual</a>
-            <a href="{{ get_url(path='old-directors') }}">Diretorias Antigas</a>
+            <a href="{{ get_url(path='directors-old') }}">Diretorias Antigas</a>
         </div>
     </header>
 <section class="directors-page">
