@@ -137,7 +137,8 @@ html {
     font-family: "Nunito";
     font-style: normal;
     font-weight: 400;
-    src: url("/fonts/nunito/nunito-v32-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("{{get_url('/fonts/nunito/nunito-v32-latin-regular.woff2')}}")
+        format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* nunito-500 - latin */
@@ -146,7 +147,8 @@ html {
     font-family: "Nunito";
     font-style: normal;
     font-weight: 500;
-    src: url("/fonts/nunito/nunito-v32-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("{{get_url('/fonts/nunito/nunito-v32-latin-500.woff2')}}")
+        format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* nunito-600 - latin */
@@ -155,7 +157,8 @@ html {
     font-family: "Nunito";
     font-style: normal;
     font-weight: 600;
-    src: url("/fonts/nunito/nunito-v32-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("{{get_url('/fonts/nunito/nunito-v32-latin-600.woff2')}}")
+        format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* nunito-700 - latin */
@@ -164,7 +167,8 @@ html {
     font-family: "Nunito";
     font-style: normal;
     font-weight: 700;
-    src: url("/fonts/nunito/nunito-v32-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("{{get_url('/fonts/nunito/nunito-v32-latin-700.woff2')}}")
+        format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* nunito-900 - latin */
@@ -173,5 +177,6 @@ html {
     font-family: "Nunito";
     font-style: normal;
     font-weight: 900;
-    src: url("/fonts/nunito/nunito-v32-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("{{get_url('/fonts/nunito/nunito-v32-latin-900.woff2')}}")
+        format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
