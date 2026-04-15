@@ -1,3 +1,6 @@
+// Tem alguma coisa quebrando o layout do espaçamento horizontal no footer, não achei qual prop está
+// fazendo isso.
+// TODO Encontrar e corrigir o espaçamentos entre as colunas de links no footer
 .main-footer {
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,6 +42,11 @@
         font-size: 0.9rem;
         margin-bottom: 8px;
         opacity: 0.9;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
     }
 }
 
@@ -87,9 +95,11 @@
     a {
         color: white;
         text-decoration: none;
-        display: block;
-        margin-bottom: 15px;
+        display: flex;
         font-weight: 500;
+        align-items: center;
+        margin-bottom: 12px;
+        gap: 5px;
     }
 }
 
@@ -112,7 +122,8 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
 
-    span {
+    a {
+        text-decoration: none;
         font-weight: 700;
         color: rgba(255, 255, 255, 0.5);
     }
